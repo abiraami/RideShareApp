@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/uxPostRideMenu"
+        android:title="Post A Ride" />
+
+    <item android:id="@+id/uxFindRideMenu"
+        android:title="Find A Ride" />
+
+    <item android:id="@+id/uxAllRideMenu"
+        android:title="Show All Rides" />
+
+    <item android:id="@+id/uxLogOutMenu"
+        android:title="Logout" />
+
+</menu>

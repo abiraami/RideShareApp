@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_post_ride"
+            android:icon="@drawable/postride1"
+            android:title="Post Ride" />
+        </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_list_all_rides"
+            android:icon="@drawable/listride2"
+            android:title="Show All Rides" />
+        </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+
+        <item
+            android:id="@+id/nav_search_rides"
+            android:icon="@drawable/search_ride"
+            android:title="Find a Ride" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Profile" />
+    </group>
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+</menu>

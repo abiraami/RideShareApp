@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="80dp"
+    android:background="#FFFFFF"
+    tools:context="com.example.abiraami.rideshare.MainActivity"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/rideshare1"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+
+    <!--Email-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/uxEditUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Email id"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="10dp"
+            android:layout_alignRight="@id/uxEditUserName"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/email" />
+
+    </RelativeLayout>
+    <!--password-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/uxEditPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:inputType="textPassword"
+            android:hint="password"
+            android:textColor="#000000" />
+
+        <ImageView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignRight="@id/uxEditPassword"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/password" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:onClick="onLoginClick"
+        android:textSize="20dp"
+        android:elevation="4dp"
+        android:background="#9bc60f"
+        android:layout_gravity="center"/>
+</LinearLayout>
+<!--#9bc60f-->
