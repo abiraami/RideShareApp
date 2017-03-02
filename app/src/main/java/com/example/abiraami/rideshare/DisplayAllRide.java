@@ -25,10 +25,10 @@ public class DisplayAllRide extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ListView listView=(ListView)findViewById(R.id.uxLVDisplayRides);
-        String dbTableName="RideDetails";
-        String createQuery=null;
+        /*String dbTableName="RideDetails";
+        String createQuery=null;*/
         DbHelper dbObject=DbHelper.getInstance(this);
-        dbObject.onDbInitialize(dbTableName,createQuery);
+        //dbObject.onDbInitialize(dbTableName,createQuery);
         RideDetails[] details = dbObject.getData();
 
         ListViewAdapter adapter=new ListViewAdapter(this, details,getApplicationContext());

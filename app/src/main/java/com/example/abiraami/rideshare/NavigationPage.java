@@ -116,12 +116,12 @@ public class NavigationPage extends AppCompatActivity
 
     private long dbOperations(RideDetails details) {
         //boolean isInserted=false;
-        String dbTableName="RideDetails";
+        /*String dbTableName="RideDetails";
         String createQuery="create table "
                 + dbTableName
-                + "(ID integer primary key autoincrement, StartPoint text,EndPoint text, NoSpot integer,TravelDate integer); ";
+                + "(ID integer primary key autoincrement, StartPoint text,EndPoint text, NoSpot integer,TravelDate integer); ";*/
         dbObject=DbHelper.getInstance(this);
-        dbObject.onDbInitialize(dbTableName,createQuery);
+        //dbObject.onDbInitialize(dbTableName,createQuery);
         //dbObject.deleteSessions();
         long rowId=dbObject.addData(details);
         if(rowId!=-1) {

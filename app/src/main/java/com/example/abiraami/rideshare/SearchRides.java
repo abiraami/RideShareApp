@@ -46,10 +46,10 @@ public class SearchRides extends AppCompatActivity {
         TextView resultDisplay=(TextView)findViewById(R.id.uxTVResult);
         listView.invalidateViews();
         resultDisplay.setText(null);
-        String dbTableName="RideDetails";
-        String createQuery=null;
+        /*String dbTableName="RideDetails";
+        String createQuery=null;*/
         DbHelper dbObject=DbHelper.getInstance(this);
-        dbObject.onDbInitialize(dbTableName,createQuery);
+        //dbObject.onDbInitialize(dbTableName,createQuery);
         RideDetails[] searchResult=dbObject.searchData(startPoint,endPoint);
 
         if(searchResult.length==0)

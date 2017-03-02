@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     {
         String userName=((TextView)findViewById(R.id.uxEditUserName)).getText().toString();
         String password=((TextView)findViewById(R.id.uxEditPassword)).getText().toString();
-        if(userName.equals("Dave")&&password.equals("Test123"))
+        if(userName.equals("Dave@gmail.com")&&password.equals("Test123"))
         {
             Intent explicitIntent = new Intent(this, NavigationPage.class);
             startActivity(explicitIntent);

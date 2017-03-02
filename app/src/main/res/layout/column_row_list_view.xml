@@ -13,7 +13,8 @@
         android:id="@+id/imgUser"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/user_icon"
+        android:src="@drawable/profile1"
+        android:background="@drawable/circle_border"
         android:layout_alignParentLeft="true"/>
 
         <RelativeLayout

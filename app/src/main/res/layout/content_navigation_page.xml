@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_navigation_page"
@@ -9,37 +9,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@android:color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.abiraami.rideshare.NavigationPage"
     tools:showIn="@layout/app_bar_navigation_page">
-    <EditText
-        android:id="@+id/uxEditStrtPoint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Starting Point"
-        android:gravity="center_horizontal"
-        android:layout_below="@id/uxMyToolbar"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
 
-    <EditText
-        android:id="@+id/uxEditEndPoint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Ending Point"
-        android:gravity="center_vertical"
-        android:layout_toRightOf="@id/uxEditStrtPoint"
-        android:layout_below="@id/uxMyToolbar"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-    <EditText
-        android:id="@+id/uxEditDate"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:hint="Date"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/uxEditEndPoint"/>
+
     <!--<DatePicker
         android:id="@+id/uxDatePicker"
         android:layout_width="wrap_content"
@@ -50,16 +26,101 @@
         android:id="@+id/uxTimePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></TimePicker>
---> <EditText
-    android:id="@+id/uxEditNoSpot"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:hint="Available Spot"
-    android:inputType="number"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="50dp"
-    android:layout_toRightOf="@id/uxEditDate"
-    android:layout_below="@id/uxEditEndPoint"/>
+-->
+
+    <!--Starting point-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/img_start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/start_location" />
+        <EditText
+            android:id="@+id/uxEditStrtPoint"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Start Location"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/img_start"/>
+    </RelativeLayout>
+    <!--Ending location-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_end"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/end_location" />
+        <EditText
+            android:id="@+id/uxEditEndPoint"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="End Location"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/img_end"/>
+    </RelativeLayout>
+    <!--Calendar- choose date-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_calendar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/calendar2" />
+        <EditText
+            android:id="@+id/uxEditDate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Choose Ride Date"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/img_calendar"/>
+    </RelativeLayout>
+    <!--Spots-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_group"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/group_icon" />
+        <EditText
+            android:id="@+id/uxEditNoSpot"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_gravity="center_horizontal"
+            android:hint="Available Spot"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/img_group"/>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/uxBtnPostRide"
@@ -68,11 +129,13 @@
         android:text="Post Ride"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/uxEditNoSpot"/>
+        android:elevation="4dp"
+        android:background="@color/myGreenTheme"
+        android:layout_gravity="center"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/rideshare1"
         android:layout_below="@id/uxBtnPostRide"
         android:layout_marginTop="40dp"/>
-</RelativeLayout>
+</LinearLayout>

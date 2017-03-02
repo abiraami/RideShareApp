@@ -14,7 +14,7 @@
         android:id="@+id/uxMyToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#9bc60f"
+        android:background="@color/myGreenTheme"
         app:title="@string/displayTitle"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -29,12 +29,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_below="@id/uxMyToolbar"
-
-
-
-
-        >
-       <!--
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp">       <!--
        android:background="@drawable/border_list_view"
        android:divider="#9bc60f"
         android:dividerHeight="2dp"-->
