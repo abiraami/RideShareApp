@@ -2,9 +2,12 @@ package com.example.abiraami.rideshare;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.text.InputType;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -15,6 +18,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -64,6 +69,15 @@ public class NavigationPage extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         getNavigationContent();
+        /*Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(getResources().getColor(R.color.myGreenTheme));*/
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.BLUE);
+        }
     }
 
     private void getNavigationContent() {
@@ -125,13 +139,11 @@ public class NavigationPage extends AppCompatActivity
         //dbObject.deleteSessions();
         long rowId=dbObject.addData(details);
         if(rowId!=-1) {
-            Toast.makeText(this, "Ride Posted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Ride Posted!!", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "Sorry! Something went wrong. Try again", Toast.LENGTH_LONG).show();
         }
-
-
         return rowId;
     }
 
@@ -143,10 +155,9 @@ public class NavigationPage extends AppCompatActivity
                 fromDatePickerDialog.show();
             }
         });
-
-
         Calendar newCalendar = Calendar.getInstance();
-        fromDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        //added custom style to the date picker using R.style.MyDatePickerStyle
+        fromDatePickerDialog = new DatePickerDialog(this, R.style.MyDatePickerStyle,new DatePickerDialog.OnDateSetListener() {
 
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 Calendar newDate = Calendar.getInstance();
@@ -155,8 +166,6 @@ public class NavigationPage extends AppCompatActivity
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-
     }
 
     private void clearFields()
@@ -179,7 +188,7 @@ public class NavigationPage extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation_page, menu);
+        //getMenuInflater().inflate(R.menu.navigation_page, menu);
         return true;
     }
 

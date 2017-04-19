@@ -22,11 +22,10 @@
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationView"
         app:itemTextColor="@android:color/black"
-        app:itemIconTint="@color/myGreenTheme"
-
-
+        app:itemIconTint="@android:color/black"
         app:headerLayout="@layout/nav_header_navigation_page"
-        app:menu="@menu/activity_navigation_page_drawer" />
+        app:menu="@menu/activity_navigation_page_drawer"
+        android:background="@android:color/white"/>
     <!--
      app:itemTextColor="@color/material_blue_grey_800"
     app:itemIconTint="@color/material_deep_teal_500"

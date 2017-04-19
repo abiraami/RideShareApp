@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:layout_gravity="center_horizontal"
-            android:hint="Available Spot"
+            android:hint="Available Spots"
             android:textColor="@android:color/black"
             android:layout_toRightOf="@id/img_group"/>
     </RelativeLayout>
@@ -131,6 +131,9 @@
         android:layout_marginTop="20dp"
         android:elevation="4dp"
         android:background="@color/myGreenTheme"
+        android:textStyle="bold|italic"
+        android:textSize="16sp"
+        android:padding="16dp"
         android:layout_gravity="center"/>
     <ImageView
         android:layout_width="match_parent"

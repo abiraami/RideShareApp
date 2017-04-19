@@ -40,7 +40,7 @@ public class DisplayAllRide extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
             {
                 int pos=position+1;
-                Toast.makeText(getApplicationContext(), Integer.toString(pos)+" Clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), Integer.toString(pos)+" Clicked", Toast.LENGTH_SHORT).show();
             }
 
         });

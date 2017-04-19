@@ -9,11 +9,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MainActivity">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <activity android:name=".PostRide" />
         <activity android:name=".DisplayAllRide" android:parentActivityName=".NavigationPage"/>
@@ -22,11 +22,11 @@
             android:name=".NavigationPage"
             android:label="@string/title_activity_navigation_page"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
     </application>
 

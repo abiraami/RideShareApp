@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:background="@drawable/border_list_view"
     android:orientation="horizontal"
     android:elevation="10dp"
@@ -14,6 +16,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/profile1"
+        android:padding="5dp"
         android:background="@drawable/circle_border"
         android:layout_alignParentLeft="true"/>
 
@@ -31,7 +34,7 @@
                 android:id="@+id/uxTravelDate"
                 android:layout_height="40dp"
                 android:layout_width="150dp"
-
+                android:textStyle="italic"
                 android:textSize="20sp"
                 android:layout_margin="5dp"
                 android:text="Date time"
@@ -43,6 +46,7 @@
                 android:layout_width="30dp"
                 android:layout_weight="0.5"
                 android:textSize="20dp"
+                android:textStyle="italic"
                 android:text="5"
                 android:layout_alignParentRight="true"
                 android:paddingRight="10dp"
